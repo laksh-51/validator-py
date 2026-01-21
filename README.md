@@ -12,3 +12,23 @@ A production-grade Python script that leverages Gemini 2.5 Flash to validate use
 1. **Clone the project** and navigate to the directory:
    ```bash
    cd validator-py
+
+2. **Create and activate a virtual environment:**
+
+'''Bash
+
+    cd python -m venv venv
+    cd .\venv\Scripts\activate
+    
+3. **Install dependencies:**
+
+'''Bash
+
+    pip install -r requirements.txt
+    npm install -g promptfoo
+
+4. **Configure Environment: Create a .env file and add your Google Gemini API Key:**
+
+'''Code snippet
+
+    GEMINI_API_KEY=your_aiza_key_here   
