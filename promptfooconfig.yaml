@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+
+# We leave the prompt empty because the script handles the logic
+prompts:
+  - "{{input_file}}"
+
+providers:
+  # Using the 'id' as a string and disabling the default behavior 
+  # of passing the prompt as the first argument.
+  - id: "exec:python validate_user.py {{input_file}}"
+
+tests:
+  - description: "Should identify invalid user data"
+    vars:
+      input_file: input1.json
+    assert:
+      - type: javascript
+        value: "JSON.parse(output).is_valid === false"
+      - type: javascript
+        value: "JSON.parse(output).errors.length > 0"
+
+  - description: "Should verify valid user data"
+    vars:
+      input_file: input2.json
+    assert:
+      - type: javascript
+        value: "JSON.parse(output).is_valid === true"
