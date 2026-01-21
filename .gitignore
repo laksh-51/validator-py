@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Secrets and Environment Variables
+.env
+
+# Promptfoo outputs and cache
+.promptfoo/
+promptfoo-logs/
+*.log
+
+# Windows specific
+Thumbs.db
+desktop.ini
+
+# VS Code settings
+.vscode/
