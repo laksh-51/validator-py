@@ -15,20 +15,20 @@ A production-grade Python script that leverages Gemini 2.5 Flash to validate use
 
 2. **Create and activate a virtual environment:**
 
-'''Bash
+'''bash
 
-    cd python -m venv venv
-    cd .\venv\Scripts\activate
+    python -m venv venv
+    .\venv\Scripts\activate
     
 3. **Install dependencies:**
 
-'''Bash
+'''bash
 
     pip install -r requirements.txt
     npm install -g promptfoo
 
 4. **Configure Environment: Create a .env file and add your Google Gemini API Key:**
 
-'''Code snippet
+'''
 
     GEMINI_API_KEY=your_aiza_key_here   
